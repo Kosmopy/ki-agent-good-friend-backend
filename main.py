@@ -32,7 +32,7 @@ async def generate_message(data: OccasionRequest):
 
     encoded_message = quote(corrected)
     whatsapp_link = f"https://wa.me/{data.phone}?text={encoded_message}"
-
+    println("✅ Raw response from backend: $responseBodyString")
     return {
         "message": corrected,
         "whatsapp_link": whatsapp_link
