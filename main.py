@@ -8,6 +8,10 @@ import os
 
 app = FastAPI()
 
+@app.on_event("startup")
+async def startup_event():
+    print("🚀 Backend started and ready to receive requests!")
+
 # Load Groq model once
 model = ChatGroq(model="llama-3.3-70b-versatile", temperature=2)
 
@@ -32,7 +36,6 @@ async def generate_message(data: OccasionRequest):
 
     encoded_message = quote(corrected)
     whatsapp_link = f"https://wa.me/{data.phone}?text={encoded_message}"
-    println("✅ Raw response from backend: $responseBodyString")
     return {
         "message": corrected,
         "whatsapp_link": whatsapp_link
