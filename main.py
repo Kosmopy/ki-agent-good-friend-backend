@@ -10,6 +10,10 @@ class OccasionRequest(BaseModel):
     occasion: str
     date: str
 
+@app.get("/")
+def read_root():
+    return {"message": "Backend is running!"}
+
 @app.post("/generate-message")
 async def generate_message(data: OccasionRequest):
     message = f"Hey {data.name}, just a quick note to say happy {data.occasion} on {data.date}! 🎉"
