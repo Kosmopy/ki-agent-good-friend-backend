@@ -25,7 +25,7 @@ class OccasionRequest(BaseModel):
 async def generate_message(data: OccasionRequest):
     prompt = (
         f"Schreibe eine herzliche Nachricht aus der Perspektive eines Freundes für {data.name} zum Anlass ihrer {data.occasion} heute. "
-        "Schreibe auf Deutsch, in 1-2 Sätzen und möglichst personalisiert mit Bezug zu {data.occasion}. Schreibe aus der Ich-Perspektive. Vermeide 'wir'. Suggeriere nicht, dass du die Person heute sehen wirst."
+        "Schreibe auf Deutsch, in einem Satz und möglichst personalisiert mit Bezug zu {data.occasion}. Schreibe aus der Ich-Perspektive. Vermeide 'wir'. Suggeriere nicht, dass du die Person heute sehen wirst. Gehe nicht von einer bestimmten Beziehung (z.B. Schwester, Vater etc), sondern belibe diesbezüglich neutral."
     )
     response = model.invoke(prompt)
     message = response.content
