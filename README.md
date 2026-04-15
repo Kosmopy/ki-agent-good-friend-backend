@@ -1,4 +1,4 @@
-# KI-Agent Good Friend
+# Good Friend
 
 Backend service for the **Good Friend** application – a system designed to support meaningful interactions and intelligent assistance.
 
