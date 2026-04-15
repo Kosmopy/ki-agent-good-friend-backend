@@ -7,8 +7,6 @@ Backend service for the **Good Friend** application – a system designed to sup
 ## Features
 
 - RESTful API for client communication
-- User and session management
-- Integration with external services (e.g. AI / database)
 - Scalable backend architecture
 - Environment-based configuration
 
@@ -17,9 +15,7 @@ Backend service for the **Good Friend** application – a system designed to sup
 ## Tech Stack
 
 - Python
-- Flask (or FastAPI)
-- Database (e.g. Cassandra / Astra DB)
-- Cloud-ready deployment
+- FastAPI
 
 ---
 
